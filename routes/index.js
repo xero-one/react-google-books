@@ -11,7 +11,7 @@ const apiRoutes = require("./api");
 /*api routes*/
 router.use("/api", apiRoutes);
 
-// default - if no routs hit send home page (*)
+/*We set the default route - if no routs hit send home page (*)*/
 router.use((req, res) => {
     res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
