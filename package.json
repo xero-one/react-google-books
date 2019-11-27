@@ -6,6 +6,9 @@
   "private": true,
   "homepage": "https://react-google-books-bxxdyz.herokuapp.com/",
   "dependencies": {
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.7.12",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0"
