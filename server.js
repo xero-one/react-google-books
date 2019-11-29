@@ -36,11 +36,14 @@ mongoose.Promise = Promise;
 app.use(routes);
 
 /*We set the connection to our Mongo database*/
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactgooglebooks")
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/google-books-db',
+  { useNewUrlParser: true }
+);
 
 /*Set the "app" to listen to PORT set above*/
 app.listen(PORT, () => {
   console.log(`Hello 🌎 ==> Server now on port ${PORT}!`);
 });
 
-/*End our calls to program our app from the varibales/constants we defined above==============*/
+/*End our calls to program our app from the varibales/constants we defined above==============*/`
