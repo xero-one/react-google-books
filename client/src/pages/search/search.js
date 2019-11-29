@@ -50,13 +50,19 @@ class Search extends Component {
       <div>
         <Jumbotron>
           <h1 className="display-4">REACT GOOGLE BOOKS SEARCH</h1>
-          <p className="lead">Browse any book and save the ones of interest...</p>
+          <p className="lead">Browse any book and save the ones of interest.</p>
           <hr className="my-4" />
           <p className="lead">
-            <Link className="btn btn-default btn-lg" to="/" role="button">New Search</Link>
-            <Link className="btn btn-default btn-lg" to="/saved" role="button">Saved Books</Link>
+            <button className="btn search-button" variant="light" size="lg" id="">  
+            <Link to="/" role="button">New Search</Link>
+            </button>
+
+            <button className="btn save-button" variant="dark" size="lg" id="">
+            <Link to="/saved" role="button">Saved Books</Link>
+            </button>
           </p>
         </Jumbotron>
+
         <Container>
           <form>
             <Input
@@ -68,7 +74,8 @@ class Search extends Component {
             />
             <FormButton         
               onClick={this.handleFormSubmit}
-              className="btn btn-info"
+              className="btn btn-secondary search-button"
+              id="search-button"
             >
               Search
             </FormButton>
