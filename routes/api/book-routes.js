@@ -3,7 +3,7 @@ const router = require("express").Router();
 const {
     fetchSavedBooks,
     saveBook,
-    removeBook
+    deleteBook
   } = require('../../controllers/booksController');
 
 /*Set our get and post methods using api/books router*/
@@ -14,7 +14,7 @@ router
 
 /*We set the router to delete/remove the api/books/:id router based on the books id*/
 router.route("/:id")
-    .delete(removeBook);
+    .delete(deleteBook);
 
 /*"module.exports" export the route so it's available in other parts of the app*/    
 module.exports = router;
