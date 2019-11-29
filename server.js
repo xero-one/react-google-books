@@ -31,6 +31,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+mongoose.Promise = Promise;
 /*We set our "app" to use routes for API calls*/
 app.use(routes);
 
