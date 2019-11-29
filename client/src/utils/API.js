@@ -5,7 +5,7 @@ import axios from 'axios';
 const LIMIT = "&maxResults=20";*/
 
 export const searchGoogleBooks = query => {
-  return axios.get('https://www.googleapis.com/books/v1/volumes?', {
+  return axios.get('https://www.googleapis.com/books/v1/volumes', {
     params: {
       q: query
     }
