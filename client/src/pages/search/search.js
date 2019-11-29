@@ -22,10 +22,6 @@ class Search extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
 
-    if (this.state.searchTerm === '') {
-      return this.setState({ error: 'Please put in a title.' });
-    }
-    
     if (this.state.searchTerm) {
 
       const searchTerm = this.state.searchTerm.trim();
