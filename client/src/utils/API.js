@@ -12,8 +12,8 @@ export const fetchSavedBooks = () => {
   return axios.get("/api/books");
 };
 
-export const saveBook = () => {
-  return axios.post("/api/books");
+export const saveBook = (bookData) => {
+  return axios.post("/api/books" + bookData);
 };
 
 export const deleteBook = id => {
