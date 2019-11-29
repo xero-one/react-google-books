@@ -3,7 +3,7 @@
 /*We use the "express.router" class to create route handlers, basically init a routing system*/
 const router = require("express").Router();
 
-const bookRoutes = require("./books");
+const bookRoutes = require("./book-routes");
 
 /*api routes for the books*/
 router.use("/books", bookRoutes);

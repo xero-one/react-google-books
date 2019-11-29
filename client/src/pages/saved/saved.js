@@ -14,11 +14,11 @@ class Saved extends Component {
   };
 
   componentDidMount() {
-    this.getSavedBooks();
+    this.fetchSavedBooks();
   }
 
-  getSavedBooks = () => {
-    API.getSavedBooks()
+  fetchSavedBooks = () => {
+    API.fetchSavedBooks()
       .then(res => {
         if (res.data.length > 0) {
           this.setState({
@@ -37,7 +37,7 @@ class Saved extends Component {
 
   deleteBook = id => {
     API.deleteBook(id)
-      .then(res => this.getSavedBooks())
+      .then(res => this.fetchSavedBooks())
       .catch(err => console.log(err));
   }
 

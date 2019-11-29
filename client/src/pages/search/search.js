@@ -25,7 +25,7 @@ class Search extends Component {
 
       const title = this.state.title.trim();
 
-      API.getNewBooks(title)
+      API.searchGoogleBooks(title)
         .then(res => {
 
           console.log(res.data.items);
