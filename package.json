@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "google-books-search",
+  "version": "1.0.0",
   "description": "react google books search application",
   "main": "server.js",
   "scripts": {
