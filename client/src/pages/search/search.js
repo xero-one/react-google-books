@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import Jumbotron from "../../components/jumbotron";
 import API from "../../utils/API";
 import { Container } from "../../components/grid";
-import { Input, FormBtn } from "../../components/form";
+import { Input, FormButton } from "../../components/form";
 
 class Search extends Component {
   state = {
@@ -72,13 +72,13 @@ class Search extends Component {
               label="Book Title"
               placeholder="Search Book Title (required)"
             />
-            <FormBtn         
+            <FormButton         
               onClick={this.handleFormSubmit}
               className="btn btn-secondary search-button"
               id="search-button"
             >
               Search
-            </FormBtn>
+            </FormButton>
           </form>
         </Container>
       </div>
