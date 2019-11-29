@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container } from "../../components/grid";
-import { List, ListItem } from "../../components/List";
-import Jumbotron from "../../components/jumbotron/jumbotron";
+import { List, ListItem } from "../../components/list";
+import Jumbotron from "../../components/jumbotron";
 import API from "../../utils/API";
-import BookBtn from "../../components/book-btn";
+import BookBtn from "../../components/bookButton";
 
 class Saved extends Component {
   state = {
