@@ -2,49 +2,37 @@
 const db = require("../models");
 
 /*"module.exports" export this script it's available in other parts of the app*/ 
-const findAll = (req, res) => {
-    db.Book
-      .find({})
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+const fetchSavedBooks = (req, res) => {
+    Book.find({})
+      .then(dbBookData => res.json(dbBookData))
+      .catch(err => {
+        console.log(err);
+        res.json(err);
+      });
   };
-
-  const findById = (req, res) => {
-    db.Book
-      .findById(req.params.id)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+  
+  const saveBook = (req, res) => {
+    Book.create(req.body)
+      .then(dbBookData => res.json(dbBookData))
+      .catch(err => {
+        console.log(err);
+        res.json(err);
+      });
   };
-
-
-  const create = (req, res) => {
-    db.Book
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  };
-
-  const update = (req, res) => {
-    db.Book
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  };
-
-
-  const remove = (req, res) => {
-    db.Book
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+  
+  const deleteBook = (req, res) => {
+    Book.remove({
+      _id: req.params.id
+    })
+      .then(dbBookData => res.json(dbBookData))
+      .catch(err => {
+        console.log(err);
+        res.json(err);
+      });
   };
   
   module.exports = {
-    findAll,
-    findById,
-    create,
-    update,
-    remove
+    fetchSavedBooks,
+    saveBook,
+    deleteBook
   };
