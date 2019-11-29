@@ -37,7 +37,7 @@ app.use(routes);
 
 /*We set the connection to our Mongo database*/
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost:27017/google-books-db',
+  process.env.MONGODB_URI || 'mongodb://react-google-books-bxxdyz:count123456@ds151863.mlab.com:51863/heroku_pbpmsmm4',
   { useNewUrlParser: true }
 );
 
