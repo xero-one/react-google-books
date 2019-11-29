@@ -7,7 +7,7 @@ import { Input, FormButton } from "../../components/form";
 
 class Search extends Component {
   state = {
-    searchTerm: "",
+    title: "",
     toResults: false,
     results: []
   };
@@ -21,12 +21,11 @@ class Search extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    if (this.state.title) {
 
-    if (this.state.searchTerm) {
+      const title = this.state.title.trim();
 
-      const searchTerm = this.state.searchTerm.trim();
-
-      API.searchGoogleBooks(searchTerm)
+      API.searchGoogleBooks(title)
         .then(res => {
 
           console.log(res.data.items);
@@ -51,23 +50,17 @@ class Search extends Component {
       <div>
         <Jumbotron>
           <h1 className="display-4">REACT GOOGLE BOOKS SEARCH</h1>
-          <p className="lead">Browse any book and save the ones of interest.</p>
+          <p className="lead">Browse any book and save the ones of interest...</p>
           <hr className="my-4" />
           <p className="lead">
-            <button className="btn search-button" variant="light" size="lg" id="">  
-            <Link to="/" role="button">New Search</Link>
-            </button>
-
-            <button className="btn save-button" variant="dark" size="lg" id="">
-            <Link to="/saved" role="button">Saved Books</Link>
-            </button>
+            <Link className="btn btn-default btn-lg" to="/" role="button">New Search</Link>
+            <Link className="btn btn-default btn-lg" to="/saved" role="button">Saved Books</Link>
           </p>
         </Jumbotron>
-
         <Container>
           <form>
             <Input
-              value={this.state.searchTerm}
+              value={this.state.title}
               onChange={this.handleInputChange}
               name="title"
               label="Book Title"
@@ -75,8 +68,7 @@ class Search extends Component {
             />
             <FormButton         
               onClick={this.handleFormSubmit}
-              className="btn btn-secondary search-button"
-              id="search-button"
+              className="btn btn-info"
             >
               Search
             </FormButton>

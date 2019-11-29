@@ -14,7 +14,7 @@ class Saved extends Component {
   };
 
   componentDidMount() {
-    this.fetchSavedBooks();
+    this.getSavedBooks();
   }
 
   fetchSavedBooks = () => {
@@ -37,7 +37,7 @@ class Saved extends Component {
 
   deleteBook = id => {
     API.deleteBook(id)
-      .then(res => this.fetchSavedBooks())
+      .then(res => this.getSavedBooks())
       .catch(err => console.log(err));
   }
 
@@ -47,19 +47,13 @@ class Saved extends Component {
         <div>
           <Jumbotron>
             <h1 className="display-4">REACT GOOGLE BOOKS SEARCH</h1>
-            <p className="lead">Browse any book and save the ones of interest.</p>
+            <p className="lead">Browse any book and save the ones of interest...</p>
             <hr className="my-4" />
             <p className="lead">
-                <button className="btn search-button" variant="light" size="lg" id=""> 
-                <Link to="/" role="button">New Search</Link>
-                </button>
-
-                <button className="btn save-button" variant="dark" size="lg" id="">
-                <Link to="/saved" role="button">Saved Books</Link>
-                </button>
+              <Link className="btn btn-default btn-lg" to="/" role="button">New Search</Link>
+              <Link className="btn btn-default btn-lg" to="/saved" role="button">Saved Books</Link>
             </p>
           </Jumbotron>
-
           <Container>
             <Link to="/">You have no saved books. Click here to find some.</Link>
           </Container>
@@ -70,19 +64,13 @@ class Saved extends Component {
       <div>
         <Jumbotron>
           <h1 className="display-4">REACT GOOGLE BOOKS SEARCH</h1>
-          <p className="lead">Browse any book and save the ones of interest.</p>
+          <p className="lead">Browse any book and save the ones of interest...</p>
           <hr className="my-4" />
           <p className="lead">
-          <button className="btn search-button" variant="light" size="lg" id=""> 
-                <Link to="/" role="button">New Search</Link>
-                </button>
-
-                <button className="btn save-button" variant="dark" size="lg" id="">
-                <Link to="/saved" role="button">Saved Books</Link>
-                </button>
+            <Link className="btn btn-default btn-lg" to="/" role="button">New Search</Link>
+            <Link className="btn btn-default btn-lg" to="/saved" role="button">Saved Books</Link>
           </p>
         </Jumbotron>
-
         <Container>
           <h2>Saved Books</h2>
           <List>
@@ -94,7 +82,7 @@ class Saved extends Component {
                     href={book.link}
                     target={this.state.target}
                   >
-                    <h4>{book.title}</h4>
+                    {book.title}
                   </a>
                   <p>Written By {book.author}</p>
                   <p>
@@ -112,7 +100,7 @@ class Saved extends Component {
                     disabled={book.link === "/"}
                     onClick={() => this.deleteBook(book._id)}
                   >
-                    Remove
+                    Delete
                 </BookButton>
                 </div>
               </ListItem>
