@@ -4,7 +4,7 @@ const {
     fetchSavedBooks,
     saveBook,
     removeBook
-  } = require('../../controllers/bookController');
+  } = require('../../controllers/booksController');
 
 /*Set our get and post methods using api/books router*/
 router
