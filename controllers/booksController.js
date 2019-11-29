@@ -3,7 +3,7 @@ const db = require("../models");
 
 /*"module.exports" export this script it's available in other parts of the app*/ 
 const fetchSavedBooks = (req, res) => {
-    Book.find({})
+    db.Book.find({})
       .then(dbBookData => res.json(dbBookData))
       .catch(err => {
         console.log(err);
@@ -12,7 +12,7 @@ const fetchSavedBooks = (req, res) => {
   };
   
   const saveBook = (req, res) => {
-    Book.create(req.body)
+    db.Book.create(req.body)
       .then(dbBookData => res.json(dbBookData))
       .catch(err => {
         console.log(err);
@@ -21,7 +21,7 @@ const fetchSavedBooks = (req, res) => {
   };
   
   const deleteBook = (req, res) => {
-    Book.remove({
+    db.Book.remove({
       _id: req.params.id
     })
       .then(dbBookData => res.json(dbBookData))
