@@ -14,7 +14,7 @@ class Saved extends Component {
   };
 
   componentDidMount() {
-    this.getSavedBooks();
+    this.fetchSavedBooks();
   }
 
   fetchSavedBooks = () => {
