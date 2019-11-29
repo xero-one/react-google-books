@@ -18,6 +18,10 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.7.12"
   },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "nodemon": "^2.0.1"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
