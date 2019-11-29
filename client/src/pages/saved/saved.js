@@ -4,7 +4,7 @@ import { Container } from "../../components/grid";
 import { List, ListItem } from "../../components/list";
 import Jumbotron from "../../components/jumbotron";
 import API from "../../utils/API";
-import BookBtn from "../../components/bookButton";
+import BookButton from "../../components/bookButton";
 
 class Saved extends Component {
   state = {
@@ -50,11 +50,11 @@ class Saved extends Component {
             <p className="lead">Browse any book and save the ones of interest.</p>
             <hr className="my-4" />
             <p className="lead">
-                <button className="search-button" variant="light" size="lg" id=""> 
+                <button className="btn search-button" variant="light" size="lg" id=""> 
                 <Link to="/" role="button">New Search</Link>
                 </button>
 
-                <button className="save-button" variant="dark" size="lg" id="">
+                <button className="btn save-button" variant="dark" size="lg" id="">
                 <Link to="/saved" role="button">Saved Books</Link>
                 </button>
             </p>
@@ -73,11 +73,11 @@ class Saved extends Component {
           <p className="lead">Browse any book and save the ones of interest.</p>
           <hr className="my-4" />
           <p className="lead">
-          <button className="search-button" variant="light" size="lg" id=""> 
+          <button className="btn search-button" variant="light" size="lg" id=""> 
                 <Link to="/" role="button">New Search</Link>
                 </button>
 
-                <button className="save-button" variant="dark" size="lg" id="">
+                <button className="btn save-button" variant="dark" size="lg" id="">
                 <Link to="/saved" role="button">Saved Books</Link>
                 </button>
           </p>
@@ -105,7 +105,7 @@ class Saved extends Component {
                   </p>
                 </div>
                 <div className="book-btn-div">
-                  <BookBtn
+                  <BookButton
                     key={book._id + "btn"}
                     btntype="info"
                     id={book._id}
@@ -113,7 +113,7 @@ class Saved extends Component {
                     onClick={() => this.deleteBook(book._id)}
                   >
                     Remove
-                </BookBtn>
+                </BookButton>
                 </div>
               </ListItem>
             ))}

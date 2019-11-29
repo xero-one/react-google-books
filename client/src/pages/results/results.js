@@ -72,11 +72,11 @@ class Results extends Component {
                     <p className="lead">Browse any book and save the ones of interest.</p>
                     <hr className="my-4" />
                     <p className="lead">
-                        <button className="search-button" variant="light" size="lg" id="">
+                        <button className="btn search-button" variant="light" size="lg" id="">
                             <Link to="/" role="button">New Search</Link>
                         </button>
 
-                        <button className="save-button" variant="dark" size="lg" id="">
+                        <button className="btn save-button" variant="dark" size="lg" id="">
                             <Link to="/saved" role="button">Saved Books</Link>
                         </button>
                     </p>
