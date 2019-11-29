@@ -19,7 +19,7 @@ class Results extends Component {
         if (data && data.results.length > 0) {
 
             this.setState({
-                books: data.results.filter((value, index) => index < 5),
+                books: data.results.filter((value, index) => index < 10),
                 target: "_blank"
             });
         } else {

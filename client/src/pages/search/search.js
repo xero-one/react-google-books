@@ -7,7 +7,7 @@ import { Input, FormButton } from "../../components/form";
 
 class Search extends Component {
   state = {
-    title: "",
+    searchTerm: "",
     toResults: false,
     results: []
   };
@@ -21,11 +21,16 @@ class Search extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title) {
 
-      const title = this.state.title.trim();
+    if (this.state.searchTerm === '') {
+      return this.setState({ error: 'Please put in a title.' });
+    }
+    
+    if (this.state.searchTerm) {
 
-      API.searchGoogleBooks(title)
+      const searchTerm = this.state.searchTerm.trim();
+
+      API.searchGoogleBooks(searchTerm)
         .then(res => {
 
           console.log(res.data.items);
@@ -66,7 +71,7 @@ class Search extends Component {
         <Container>
           <form>
             <Input
-              value={this.state.title}
+              value={this.state.searchTerm}
               onChange={this.handleInputChange}
               name="title"
               label="Book Title"
