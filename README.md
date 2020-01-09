@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">React Google Books</h1>
+<br>
+<h2>Description</h2>
+<p>Welcome fellow coders and viewers! Welcome to React Google Books application. This is a simple app for searching for books of any sort comfortably and most of all QUICKLY. 
+</p>
+<br>
+<h2>Instructions</h2>
+This app is powered by GOOGLE so no need make any accounts and we are sure you have an account, who doesnt have a Google account 🙄.
+<ul>
+<li>"Search New Books" - search any book you want! And the api will call in results based off of what you searched</li>
+<li>"Save" - Save a book to your collection</li>
+</ul>
+ABOUT THAT SAVED SECTION 🤔 in our header navigation you can navigate or delete a book of your choice!
+This app is especially helpful for college students!!!
+</h3>
+<br>
+<h2>Languages used: </h2>
+<ul>
+    <li>ECMAScript 6</li>
+    <li>CSS</li>
+    <li>HTML</li>
+    <li>React.js</li>
+</ul>
+<br>
+<h2>Libraries used: </h2>
+<ul>
+    <li><a href="https://getbootstrap.com" target="_blank">Bootsrap</a></li>
+</ul>
+<br>
+<h2>Middleware used: </h2>
+<ul>
+    <li><a href="https://www.npmjs.com/package/express" target="_blank">Express</a></li>
+    <li><a href="https://www.npmjs.com/package/if-env" target="_blank">Express-If ENV</a></li>
+    <li><a href="https://www.npmjs.com/package/mongoose" target="_blank">Mongoose</a></li>
+    <li><a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a></li>
+    <li><a href="https://www.npmjs.com/package/node" target="_blank">Node</a></li>
+</ul>
+<br>
+<h2>Upcoming changes/goals: </h2>
+<ul>
+    <li>Add more graphics/animations</li>
+    <li>Better header design</li>
+    <li>Logo work in progress</li>
+    <li>Add in social-media intergration for sharing articles</li>
+    <li>Find a way to make each book saved unique to the user without having to make a sign-in/sign-up user mechanisim</li>
+    <li>Make every book saved into a wish list and make an option for users to create multiple wish lists</li>
+selected</li>
+</ul>
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<br>
+<h3 align="center">Link to the <a href="https://react-google-books-bxxdyz.herokuapp.com/" target="_blank">React Google Books project</a></h3>
